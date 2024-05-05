@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: grey;
+    border-radius: 0.35rem;
+}
+.container input{
+    margin-right: 15vw;
+    padding: 1vh;
+    border-radius: 0.2rem;
+}
+.container button{
+    padding: 1vh;
+    background-color: green;
+    border-radius: 0.35rem;
+}
