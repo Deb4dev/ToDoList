@@ -39,3 +39,10 @@ li{
     background-color: rgb(222, 216, 205);
     
 }
+.componenet{
+    margin: 5px 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: rgb(222, 216, 205);
+}
