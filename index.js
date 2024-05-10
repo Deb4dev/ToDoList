@@ -18,13 +18,22 @@ addBtn.addEventListener('click',add)
 function createTaskelem (task){
     const list = document.createElement('li')
     list.textContent = task
+
+    const deleteButton = document.createElement("button")
+    deleteButton.textContent = 'delete'
+    deleteButton.className = 'delete'
+    list.appendChild(deleteButton)
     taskList.appendChild(list)
+    deleteButton.addEventListener('click',()=>{
+        taskList.removeChild(list)
+        saveTask()
+    })
 }
 
 function saveTask (){
     let tasks = []
     taskList.querySelectorAll('li').forEach((item)=>{
-        tasks.push(item.textContent.trim())
+        tasks.push(item.textContent.replace('delete','').trim())
         
     })
     localStorage.setItem('tasks',JSON.stringify(tasks))
